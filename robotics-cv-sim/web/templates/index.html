@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Robotics CV Sim — 6-DOF Arm</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.1/socket.io.min.js"></script>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <span class="logo">🤖 Robotics CV Sim</span>
+  <span class="subtitle">6-DOF Manipulator + Computer Vision</span>
+  <span id="status-badge" class="badge badge-idle">Idle</span>
+</header>
+
+<main>
+  <!-- 3D Viewport -->
+  <section class="panel panel-3d">
+    <div class="panel-title">3D Simulation</div>
+    <canvas id="three-canvas"></canvas>
+    <div id="ee-readout">EE: — — —</div>
+  </section>
+
+  <!-- Camera Feed -->
+  <section class="panel panel-cam">
+    <div class="panel-title">Workspace Camera</div>
+    <canvas id="cam-canvas" width="320" height="240"></canvas>
+    <div class="cam-controls">
+      <select id="color-select">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+      </select>
+      <button onclick="detect()">Detect</button>
+      <button onclick="randomScene()">Randomize</button>
+    </div>
+  </section>
+
+  <!-- Joint Controls -->
+  <section class="panel panel-joints">
+    <div class="panel-title">Joint Control (degrees)</div>
+    <div id="joint-sliders"></div>
+    <div class="joint-btns">
+      <button onclick="goHome()">Home</button>
+      <button id="sim-btn" onclick="toggleSim()">▶ Run Sim</button>
+    </div>
+  </section>
+
+  <!-- Log -->
+  <section class="panel panel-log">
+    <div class="panel-title">System Log</div>
+    <div id="log"></div>
+  </section>
+</main>
+
+<script src="/static/sim.js"></script>
+</body>
+</html>
