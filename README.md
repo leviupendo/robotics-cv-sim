@@ -131,9 +131,6 @@ Objects are detected by HSV color range. The 2D pixel coordinates are back-proje
 
 ---
 
-## 📸 Screenshots
-
-> Add screenshots of your dashboard and simulation here.
 
 ---
 
