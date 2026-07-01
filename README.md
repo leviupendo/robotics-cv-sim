@@ -1,7 +1,7 @@
  🤖 6-DOF Robotic Arm Simulation with Computer Vision
 
-> **Course:** Robotics and Computer Integrated Manufacturing — Advanced  
-> **Project #18** | Robotics Simulation & Vision-Guided Control
+>  Robotics and Computer Integrated Manufacturing — Advanced  
+
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![OpenCV](https://img.shields.io/badge/OpenCV-4.x-green?logo=opencv)
